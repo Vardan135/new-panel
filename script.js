@@ -9,7 +9,7 @@ function open_content(e) {
 	content.forEach(item => { item.style.display = "none" });
 	arrow.forEach(item => { item.src = "images/arrow.png"; item.classList.remove("anim") });
 	content[e].style.display = "flex";
-	if (window.outerWidth <= 1200) {
+	if (window.outerWidth <= 768) {
 		arrow[e].classList.add("anim");
 		view.classList.add("anim2");
 		panel.appendChild(view);
