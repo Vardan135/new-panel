@@ -6,9 +6,15 @@ const arrow = document.querySelectorAll(".arrow");
 let elements = panel.getElementsByClassName("content");
 let bool = false;
 function open_content(e) {
-	content.forEach(item => { item.style.display = "none" });
-	arrow.forEach(item => { item.src = "images/arrow.png"; item.classList.remove("anim") });
-	content[e].style.display = "flex";
+	arrow.forEach(item => { item.src = "images/arrow.png"; item.classList.remove("anim"); item.classList.remove("anim3") });
+	if (content[e].style.display == "none" || content[e].style.display == "") {
+		content.forEach(item => { item.style.display = "none" });
+		content[e].style.display = "flex";
+		arrow[e].src = "images/arrow_select.png";
+	} else {
+		if (window.outerWidth <= 768) { arrow[e].classList.add("anim3") }
+		content[e].style.display = "none";
+	}
 	if (window.outerWidth <= 768) {
 		arrow[e].classList.add("anim");
 		view.classList.add("anim2");
@@ -23,5 +29,4 @@ function open_content(e) {
 			bool = false;
 		}
 	}
-	arrow[e].src = "images/arrow_select.png";
 }
