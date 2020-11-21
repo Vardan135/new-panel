@@ -95,7 +95,7 @@ hr{
     flex-flow: row nowrap;
     align-items: center;
     background: rgb(255,255,255);
-    background: linear-gradient(180deg, rgba(255,255,255,1) 55%, rgba(150,149,172,0.4358974358974359) 98%);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 55%, rgba(150,149,172,0.4358974358974359) 98%);
     height: 40px;
     font-size: 25px;
     padding: 5px;
@@ -131,6 +131,13 @@ hr{
   }
 .anim2 {
     animation: viewText 0.3s linear 1 normal forwards;
+}
+.anim3 {
+    animation: rotate2 0.3s linear 1 normal forwards;
+}
+@keyframes rotate2 {
+    from { -webkit-transform: rotate(90deg) }
+    to { -webkit-transform: rotate(0deg) }
   }
 @keyframes rotate {
     from { -webkit-transform: rotate(0deg) }
