@@ -12,6 +12,9 @@
         margin: 0 auto;
         padding: 0;
     }
+    body .view_text_title{
+        margin: 0px 0px 75px 0px;
+    }
 }
 @media (max-width: 768px) {
     #box #panel {
